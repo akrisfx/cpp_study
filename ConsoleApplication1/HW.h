@@ -44,6 +44,19 @@ void test_int_double()
 	std::cout << std::format("intNum * dbNum = {} \n \
 		dbNum / 1 = {} \n  \
 		dbNum / 1.0 = {} \n  \
-		int aa = {} \n "
+		int aa = {} \n"
 		, intNum * dbNum, dbNum / 1, dbNum / 1.0, aa);
+}
+
+#include <bitset>
+void xor_test()
+{
+	unsigned short int i = 63;
+	std::cout << std::bitset<8> {i} << "\n";
+	i = 1 + 4 + 32;
+	uint8_t x = 255;
+	std::cout << std::bitset<8> {i} << "\n" << (std::bitset<8> {x}) << "\n";
+	uint8_t result = i ^ x;
+	std::cout << std::bitset<8> {result};
+	
 }

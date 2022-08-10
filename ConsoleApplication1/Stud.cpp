@@ -62,6 +62,7 @@ std::string s2 = std::format("{}", red);        // OK, user-provided formatter
 int main()
 {
     test_int_double();
+    xor_test();
     return 0;
 }
 
