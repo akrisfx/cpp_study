@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #define _USE_MATH_DEFINES
 #include <math.h>
 #include <iostream>
@@ -9,8 +9,8 @@
 //void ssa();
 //#endif
 
-/// first == длина окружности
-/// second == площадь окружности
+/// first == РґР»РёРЅР° РѕРєСЂСѓР¶РЅРѕСЃС‚Рё
+/// second == РїР»РѕС‰Р°РґСЊ РѕРєСЂСѓР¶РЅРѕСЃС‚Рё
 //std::pair<double, double> searchS(const double &rad) 
 //{
 //	double dlin = 2 * M_PI * rad;
