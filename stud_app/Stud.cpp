@@ -3,9 +3,9 @@
 //#include <iostream>
 #include <format>
 #include "HW.h"
-#ifdef _USE_MATH_DEFINES 
-void ssa();
-#endif
+//#ifdef _USE_MATH_DEFINES 
+//void ssa();
+//#endif
 
 
 //int s = 10;
@@ -14,21 +14,21 @@ void ssa();
 //}
 
 
-uint64_t operator "" _m(uint64_t min) {
+/*uint64_t operator "" _m(uint64_t min) {
     return min * 60;
 }
 uint64_t operator "" _s(uint64_t s) {
     return s;
-}
+}*/
 
 
 
-enum color : int { red = 0, green, blue };
-template<> struct std::formatter<color> : std::formatter<int> {
-    auto format(color c, format_context& ctx) {
-        return formatter<int>::format((int)c, ctx);
-    }
-};
+//enum color : int { red = 0, green, blue };
+//template<> struct std::formatter<color> : std::formatter<int> {
+//    auto format(color c, format_context& ctx) {
+//        return formatter<int>::format((int)c, ctx);
+//    }
+//};
 
 //template<> struct std::formatter<color> : std::formatter<const char*> {
 //    auto format(color c, format_context& ctx) {
@@ -38,9 +38,9 @@ template<> struct std::formatter<color> : std::formatter<int> {
 
 struct err {};
 
-std::string s0 = std::format("{}", 42);         // OK, library-provided formatter
+//std::string s0 = std::format("{}", 42);         // OK, library-provided formatter
 //std::string s1 = std::format("{}", "foo");     // error: disabled formatter
-std::string s2 = std::format("{}", red);        // OK, user-provided formatter
+//std::string s2 = std::format("{}", red);        // OK, user-provided formatter
 //std::string s3 = std::format("{}", err{});
 //struct err {};
 
@@ -64,8 +64,11 @@ int main()
     //bit_shift();
     //test_int_double();
     //xor_test();
-    bit_op_test(17, 11);
+    //bit_op_test(17, 11);
+    //bit_shift_base();
+    lesson_6();
     std::cout << "\n";
+    prog_lab1();
     system("pause");
 
     return 0;
