@@ -130,8 +130,10 @@ uint32_t gen_rand(uint32_t &a, uint32_t &b)
 		x = a + std::rand() / ((RAND_MAX + 1u) / b);
 	return x;
 }
+
 void prog_lab1()
 {
+	std::srand(std::time(0));
 	setlocale(LC_ALL, "Russian");
 	uint16_t difficult;
 	std::cout << "Укажите сложность(1 - 4): ";
