@@ -3,6 +3,7 @@
 //#include <iostream>
 #include <format>
 #include "HW.h"
+//#include "sem.h"
 //#ifdef _USE_MATH_DEFINES 
 //void ssa();
 //#endif
@@ -66,7 +67,8 @@ int main()
     //xor_test();
     //bit_op_test(17, 11);
     //bit_shift_base();
-    lesson_6();
+    //lesson_6();
+    //hex2oct();
     std::cout << "\n";
     prog_lab1();
     system("pause");

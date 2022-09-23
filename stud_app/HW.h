@@ -138,23 +138,43 @@ void prog_lab1()
 	uint16_t difficult;
 	std::cout << "Укажите сложность(1 - 4): ";
 	std::cin >> difficult;
-	std::vector<uint32_t> num_set_for_random;
+	uint32_t num_set_for_random[4];
 	switch (difficult) {
 	case 1:
-		num_set_for_random = { 3, 15, 18, 40 };
+		//num_set_for_random = { 2, 15, 18, 40 };
+		num_set_for_random[0] = 2;
+		num_set_for_random[1] = 15;
+		num_set_for_random[2] = 18;
+		num_set_for_random[3] = 40;
 		break;
 	case 2:
-		num_set_for_random = { 1, 100, 103, 200 };
+		//num_set_for_random = { 1, 100, 103, 200 };
+		num_set_for_random[0] = 1;
+		num_set_for_random[1] = 100;
+		num_set_for_random[2] = 103;
+		num_set_for_random[3] = 200;
 		break;
 	case 3:
-		num_set_for_random = { 1, 1000, 1003, 2000 };
+		//uint32_t num_set_for_random[4] = { 1, 1000, 1003, 2000 };
+		num_set_for_random[0] = 1;
+		num_set_for_random[1] = 1000;
+		num_set_for_random[2] = 1003;
+		num_set_for_random[3] = 2000;
 		break;
 	case 4:
-		num_set_for_random = { 50, 10000, 10003, 30000 };
+		//uint32_t num_set_for_random[4] = { 50, 10000, 10003, 30000 };
+		num_set_for_random[0] = 1;
+		num_set_for_random[1] = 10000;
+		num_set_for_random[2] = 10003;
+		num_set_for_random[3] = 30000;
 		break;
 	default: // По факту, если мы вводим туда строку, то прога ломается, но пусть будет(на случай если введут другое число)
-		num_set_for_random = { 1, 10, 12, 30 };
-		std::cout << "Чё сказал? \n Выбрана самая простая сложность";
+		//uint32_t num_set_for_random[4] = { 1, 10, 12, 30 };
+		num_set_for_random[0] = 1;
+		num_set_for_random[1] = 10;
+		num_set_for_random[2] = 12;
+		num_set_for_random[3] = 30;
+		std::cout << "Чё сказал? \n Выбрана самая простая сложность. ";
 		break;
 	}
 	
@@ -188,4 +208,16 @@ void prog_lab1()
 		std::cin >> user_choice;
 	}
 }
+
+#include <sstream>
+#include <climits>
+void hex2oct() {
+	int n;
+	std::cout << "ABCDEF ";
+	std::istringstream("ABCDEF") >> std::hex >> n;
+	std::cout << "to 10 \n" << n << '\n';
+	std::cout << "to oct \n";
+	std::cout << std::oct << n << "\n";
+}
+
 
